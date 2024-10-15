@@ -1,25 +1,28 @@
 # config files for *Hyprland*
 
-Install `hyprpaper` for wallpaper\
-Install `waybar` for status bar\
-Install `ranger` file manager\
-Install `neovim` text editor\
-Install `bluez` and `bluez-utils` for bluetooth\
-Install `brightnessctl` for brightness control\
-Install `playerctl` for media player control\
-Install `pavucontrol` for volume mixer
+### Important Packages and Utilities
 
-Install `lazygit` for terminal UI for git (*optional*)
+* `hyprpaper` ✰ Blazing fast wallpaper utility for *Hyprland*
+* `waybar` ✰  Highly customizable Wayland bar
+* `ranger` ✰  Console file manager with VI key bindings. 
+* `neovim` ✰  Text-editor
+* `bluez` and `bluez-utils` ✰  Canonical implementation of the Bluetooth protocol 
+* `brightnessctl` ✰  Lightweight brightness control tool 
+* `playerctl` ✰  Mpris media player controller and lib
+* `pavucontrol` ✰  PulseAudio Volume Control
+* `udisks2` ✰  to mount and unmount disks
+* `wl-clipboard` ✰  Wayland copy and paste command line utilities
 
 Copy and paste to install:
 ```
-sudo pacman -Syu hyprpaper waybar ranger neovim bluez brightnessctl playerctl pavucontrol
+sudo pacman -Syu hyprpaper waybar ranger neovim bluez bluez-utils brightnessctl playerctl pavucontrol udisks2 wl-clipboard
 ```
 
 Fonts needed:
 ```
 sudo pacman -S tty-nerd-fonts-symbols ttf-inconsolata
 ```
+
 
 Default config for ranger:
 ```
@@ -40,3 +43,7 @@ Run `:PlugInstall` to install plugins in neovim
 Move all folders to `~/.config`\
 Move `.bashrc` to `~/`
 
+### Optional utilities
+
+* `lazygit` for terminal UI for git (*optional*)
+* `less` a package for git to work contents in terminal

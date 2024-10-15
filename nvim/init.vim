@@ -16,6 +16,11 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>h :tabp<CR>
 nnoremap <leader>l :tabn<CR>
 nnoremap <leader>m :MarkdownPreview<CR>
+nnoremap <C-l> <C-w>l<CR>
+nnoremap <C-h> <C-w>h<CR>
+nnoremap <C-j> <C-w>j<CR>
+nnoremap <C-k> <C-w>k<CR>
+vnoremap <C-c> "+y<CR>
 
 "general
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitright splitbelow 
