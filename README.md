@@ -11,16 +11,17 @@
 * `playerctl` ✰  Mpris media player controller and lib
 * `pavucontrol` ✰  PulseAudio Volume Control
 * `udisks2` ✰  to mount and unmount disks
+* `less` ✰  pager 
 * `wl-clipboard` ✰  Wayland copy and paste command line utilities
 
 Copy and paste to install:
 ```
-sudo pacman -Syu hyprpaper waybar ranger neovim bluez bluez-utils brightnessctl playerctl pavucontrol udisks2 wl-clipboard
+sudo pacman -Syu hyprpaper waybar ranger neovim bluez bluez-utils brightnessctl playerctl pavucontrol udisks2 wl-clipboard less
 ```
 
 Fonts needed:
 ```
-sudo pacman -S tty-nerd-fonts-symbols ttf-inconsolata
+sudo pacman -S ttf-nerd-fonts-symbols ttf-inconsolata
 ```
 
 
@@ -29,9 +30,11 @@ Default config for ranger:
 ranger --copy-config=all
 ```
 
-Add this line to `~/.config/ranger/rc.conf`
+modify line in `~/.config/ranger/rc.conf`
 ```
-set_hidden!
+set show_hidden!
+set preview_images true
+set preview_images_method kitty
 ```
 
 Make directories `~/.config/ranger/plugin` and `~/.config/nvim/plugged` to store plugins installed\
@@ -45,5 +48,15 @@ Move `.bashrc` to `~/`
 
 ### Optional utilities
 
-* `lazygit` for terminal UI for git (*optional*)
-* `less` a package for git to work contents in terminal
+* `lazygit` ✰  for terminal UI for git (*optional*)
+```
+sudo pacman -S lazygit
+```
+* `yay` ✰  arch user repository helper
+```
+pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si # builds with makepkg
+```
+* `cava` ✰  audio visualizer
+```
+yay -S cava
+```
