@@ -11,4 +11,3 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=nvim
 RANGER_LOAD_DEFAULT_RC=false
 
-. back.sh
