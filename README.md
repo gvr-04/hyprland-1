@@ -13,40 +13,52 @@
 * `playerctl` ✰  Mpris media player controller and lib
 * `pavucontrol` ✰  PulseAudio Volume Control
 * `udisks2` ✰  to mount and unmount disks
-* `less` ✰  pager 
+* `less` ✰  Pager 
 * `wl-clipboard` ✰  Wayland copy and paste command line utilities
+* `stow` ✰  Create symlinks for the config files
 
 Copy and paste to install:
 ```
-sudo pacman -Syu hyprpaper waybar ranger neovim bluez bluez-utils brightnessctl playerctl pavucontrol udisks2 wl-clipboard less
+sudo pacman -Syu hyprpaper waybar ranger neovim bluez bluez-utils brightnessctl playerctl pavucontrol udisks2 wl-clipboard less stow
 ```
 
 Fonts needed:
 ```
-sudo pacman -S ttf-nerd-fonts-symbols ttf-inconsolata
+sudo pacman -S ttf-nerd-fonts-symbols ttf-inconsolata noto-fonts-cjk
+```
+### Clone and Stow
+
+```
+git cone https://github.com/gvr-04/Dotfiles.git
+cd ~/Dotfiles
+stow --adopt hyprland
+git reset --hard
 ```
 
+### Neovim Plugins
 
-Default config for ranger:
+Install `vim-plug` as plugin manager from *__[here](https://github.com/junegunn/vim-plug)__*.\
+To install plugins in neovim run
+```
+:PlugInstall
+``` 
+
+### Ranger config
+
+Copy default config of ranger:
 ```
 ranger --copy-config=all
 ```
 
-modify line in `~/.config/ranger/rc.conf`
+Install `ranger_udisk_menu` to mount disks from ranger from *__[here](https://github.com/SL-RU/ranger_udisk_menu)__*.\
+Add the following lines in `.config/rc.conf`
 ```
-set show_hidden!
+set show_hidden true
 set preview_images true
-set preview_images_method kitty
+set preview_images_method kitty 
+map xc shell wl-copy < %f
 ```
 
-Make directories `~/.config/ranger/plugin` and `~/.config/nvim/plugged` to store plugins installed\
-
-Install `ranger_udisk_menu` to mount disks from ranger from [here](https://github.com/SL-RU/ranger_udisk_menu)\
-Install `vim-plug` as plugin manager from [here](https://github.com/junegunn/vim-plug).\
-Run `:PlugInstall` to install plugins in neovim
-
-Move all folders to `~/.config`\
-Move `.bashrc` to `~/`
 
 ### Optional utilities
 
