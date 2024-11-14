@@ -24,7 +24,7 @@ vnoremap <C-c> "+y<CR>
 
 "general
 set encoding=UTF-8 nobackup nowritebackup nocursorline splitright splitbelow 
-set shiftwidth=4 tabstop=4 softtabstop=4 autoindent smartindent expandtab wildmode=longest,list,full
+set shiftwidth=4 tabstop=4 softtabstop=4 autoindent smartindent expandtab wildmode=longest,list,full nowrap
 set statusline= statusline+=%#CursorLineNr#\ %y%#NonText#\ %F
 set statusline+=%=%#DiffText#\ %l/%L\ [%c]
 colorscheme gruvbox
