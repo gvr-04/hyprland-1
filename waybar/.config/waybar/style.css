@@ -1,86 +1,101 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: mononoki Nerd Font;
+    font-family: "JetBrainsMono Nerd Font, monospace";
+    font-weight: bold;
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
-    color: white;
+    border-radius: 10px;
+    background: #11111b;
+    color: #cdd6f4;
 }
 
 tooltip {
-	background: #0f0f0f;
-	border-radius: 15px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #262626;
-	}
+    background: #010409;
+    border-radius: 10px;
+}
 
 #workspaces button {
-    padding: 5px 10px;
-    color: #f0f0f0;
+    padding: 5px;
+    color: #313244;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #a6adc8;
 }
 
 #workspaces button.focused {
-    color: #0f0f0f;
-    background-color: #c49ec4;
-    border-radius: 15px;
+    color: #a6adc8;
+    background: #010409;
 }
 
 #workspaces button.urgent {
-    color: #0f0f0f;
-    background-color: #9ec3c4;
-    border-radius: 15px;
+    color: #11111b;
+    background: #010409;
 }
 
 #workspaces button:hover {
-	background-color: #c49ec4;
-	color: #0f0f0f;
-	border-radius: 15px;
+    background: #010409;
+    color: #cdd6f4;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #workspaces {
-	background-color: #0f0f0f;
-	padding: 5px 10px;
-	margin: 5px 0px;
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#temperature,
+#workspaces,
+#tray,
+#backlight {
+    padding: 0px 14px;
 }
 
-#workspaces {
-	background-color: #262626;
-	border-radius: 15px 0px 0px 15px;
+#temperature.critical {
+    color: #eba0ac;
 }
 
-#custom-date {
-	color: #9ec3c4;
-}
-
-#clock {
-    color: #a39ec4;
-    border-radius: 0px 15px 15px 0px;
+#tray {
     margin-right: 10px;
 }
 
-#battery {
-    color: #9ec49f;
+#workspaces {
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
 }
 
-#battery.charging {
-    color: #9ec49f;
+#window {
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
-#battery.warning:not(.charging) {
-    background-color: #c49ea0;
-    color: #0f0f0f;
+#clock {
+    color: #fab387;
+    margin-right: 14px;
 }
 
 #network {
-	color: #c4c19e;
-	border-radius: 0px 0px 0px 0px;
+    color: #f9e2af;
 }
 
+#bluetooth {
+    color: #89b4fa;
+} 
+
 #pulseaudio {
-	color: #a5b4cb;
+    color: #89b4fa;
+}
+
+#pulseaudio.microphone {
+    color: #cba6f7;
+}
+
+#battery {
+    color: #a6e3a1;
 }
