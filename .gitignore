@@ -1,3 +1,1 @@
-.stow-local-ignore
-hyprland/.config/nvim/plugged
-nvim/.config/nvim/plugged
+dots/.config/nvim/plugged
