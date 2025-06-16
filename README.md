@@ -1,6 +1,6 @@
 # my *Hyprland* setup
 
-<img src="https://github.com/gvr-04/Dotfiles/blob/master/pictures/2024-10-29_19-10-1730209787.png?raw=true">
+<img src="https://github.com/gvr-04/hyprland-1/blob/master/github-pictures/2024-10-29_19-10-1730209787.png">
 
 ### Important Packages and Utilities
 
